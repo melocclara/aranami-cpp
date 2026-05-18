@@ -1,0 +1,23 @@
+#ifndef COLETAVEL_H
+#define COLETAVEL_H
+
+#include <string>
+#include "Jogador.hpp"
+
+class Coletavel {
+    protected:
+        float pos_x, pos_y;
+        std::string tipo;
+    public:
+        // Construtor e destrutor virtual
+        Coletavel(float pos_x, float pos_y, const std::string& tipo);
+        virtual ~Coletavel();
+        // Método virtual puro
+        virtual void aplicarEfeito(Jogador& jogador) = 0;
+        // Getters
+        float getPosX() const;
+        float getPosY() const;
+        std::string getTipo() const;
+};
+
+#endif
