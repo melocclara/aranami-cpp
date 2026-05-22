@@ -90,4 +90,40 @@ float Jogador::getPosY() const{
     return(this->pos_y);
 }
 
-// FALTA IMPLEMENTAR O update() e o <<. Farei depois.
+std::ostream& operator<<(std::ostream& os, const Jogador& j) {
+    os << "--- Status do Jogador ---\n";
+    os << "Vida: " << j.vida << "/" << j.max_vida << "\n";
+    os << "Posição: (" << j.pos_x << ", " << j.pos_y << ")\n";
+    os << "Velocidade: (" << j.vel_x << ") | Direção: " << j.direcao << "\n";
+    os << "Invencibilidade: " << j.invencib_timer << " | Cooldown do Tiro: " << j.tiro_cooldown << "\n";
+    
+    os << "Inventário:\n";
+    if (j.inventario.empty()) {
+        os << "(vazio)\n";
+    } else {
+        for (std::pair<std::string, int> item : j.inventario) {
+            os << " - " << item.first << ": " << item.second << "\n";
+        }
+    }
+    os << "=========================\n";
+    
+    return os;
+}
+
+void Jogador::update() { // vai ser chamado uma vez por turno(?) na main
+    if (this->tiro_cooldown > 0) {
+        this->tiro_cooldown--;
+    }
+
+    if (this->invencib_timer > 0) {
+        this->invencib_timer--;
+    }
+
+    if (noAr()) {
+        this->pos_y -= this->vel_y; 
+
+        if (this->pos_y <= 0.0f) {
+            this->pos_y = 0.0f;
+        }
+    }
+}
