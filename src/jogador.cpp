@@ -12,7 +12,6 @@ Jogador::Jogador(int max_vida, float pos_x, float pos_y, float vel_x, float vel_
     this->direcao = 1;
     invencib_timer = 0;
     tiro_cooldown = 0;
-    no_ar = false;
     pulo_duplo = false;
     inventario.insert({"Pedra", 8});
 }
@@ -22,17 +21,24 @@ void Jogador::mover(int direcao){
     this->pos_x += (vel_x*direcao);
 }
 
+bool Jogador::noAr() const {
+    return this->pos_y > 0;
+}
+
 void Jogador::pular(){
-    if(no_ar == true){
+    if(noAr()){
         if(pulo_duplo == true){
             pos_y += vel_y;
             pulo_duplo = false;
         }
     }
-    else{
-        no_ar = true;
-        pulo_duplo = false;
-        pos_y += vel_y;
+    else {
+        pos_y += vel_y; 
+        if (getItem("Pipa") > 0) {
+            pulo_duplo = true; 
+        } else {
+            pulo_duplo = false;
+        }
     }
 }
 
