@@ -2,9 +2,10 @@
 #define INIMIGO_H
 
 #include <string>
+#include "Jogador.hpp"
 
 class Inimigo {
-    private:
+    protected:
         std::string nome;
         double vida;
         double dano; 
@@ -17,7 +18,7 @@ class Inimigo {
         virtual ~Inimigo() {}
 
         //ações
-        virtual void atacar() =0; //método virtual puro, permite às classes filhas terem diferentes maneiras de atacar
+        virtual void atacar(Jogador &jogador) =0; //método virtual puro, permite às classes filhas terem diferentes maneiras de atacar
         void receberDano(int qtd); 
         void mostrarStatus() const;
 
