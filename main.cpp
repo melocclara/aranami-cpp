@@ -1,6 +1,5 @@
 #include <iostream>
 #include "Jogador.hpp"
-#include "Tiro.hpp"
 #include "TiroCapivara.hpp"
 #include "TiroTucano.hpp"
 #include "Onca.hpp"

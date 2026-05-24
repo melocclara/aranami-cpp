@@ -1,6 +1,6 @@
 #include "Jogador.hpp"
 #include "Pedra.hpp"
-#include "Tiro.hpp"
+#include "TiroJogador.hpp"
 
 Jogador::Jogador(int max_vida, double pos_x, double pos_y, double vel_x, double vel_y) {
     this->max_vida = max_vida;
@@ -50,7 +50,7 @@ void Jogador::receberDano(int dano) {
 }
 
 void Jogador::recuperarVida(int hp) {
-    this->vida += hp;
+    this->vida = std::min(this->vida + hp, max_vida);
 }
 
 void Jogador::atirar(std::vector<Projetil*>& balas) {
@@ -60,7 +60,7 @@ void Jogador::atirar(std::vector<Projetil*>& balas) {
     else{
         inventario["pedra"] -= 1;
         tiro_cooldown = 2;
-        Tiro* pedra = new Tiro(this->pos_x, this->pos_y, direcao);
+        TiroJogador* pedra = new TiroJogador(this->pos_x, this->pos_y, direcao);
         balas.push_back(pedra);
     }
 }

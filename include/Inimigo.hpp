@@ -21,7 +21,7 @@ class Inimigo {
         virtual ~Inimigo();
         // ações
         virtual void atacar(Jogador &jogador, std::vector<Projetil*>& balas) = 0;
-        void receberDano(int qtd); 
+        void receberDano(double qtd); 
         void atualizarCooldown();
         std::string inline getNome() const { return nome; };
         double inline getVida() const { return vida; };

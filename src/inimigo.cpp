@@ -14,7 +14,7 @@ void Inimigo::atualizarCooldown() {
 }
 
 // dano que o inimigo recebe do jogador
-void Inimigo::receberDano(int qtd) {
+void Inimigo::receberDano(double qtd) {
     vida -= qtd;
     if(vida < 0) {
         vida = 0;
