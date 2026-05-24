@@ -1,6 +1,7 @@
 #include "Jogador.hpp"
 #include "Pedra.hpp"
 #include "TiroJogador.hpp"
+#include "Tela.hpp"
 
 Jogador::Jogador(int max_vida, double pos_x, double pos_y, double vel_x, double vel_y) {
     this->max_vida = max_vida;
@@ -108,8 +109,8 @@ void Jogador::update() { // vai ser chamado uma vez por turno(?) na main
     if (noAr()) {
         this->pos_y -= this->vel_y; 
 
-        if (this->pos_y <= 0.0) {
-            this->pos_y = 0.0;
+        if (this->pos_y <= Tela::getChao()) {
+            this->pos_y = Tela::getChao();
         }
     }
 }

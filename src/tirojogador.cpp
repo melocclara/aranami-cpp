@@ -27,10 +27,10 @@ void TiroJogador::update() {
     this->pos_x += this->vel_x; 
     this->pos_y += this->vel_y; 
 
-    ricochetear(0.0, 0.0); // ajustar limites na main
+    ricochetear(Tela::getLimiteEsquerdo(), Tela::getLimiteDireito());
 
-    if (this->pos_y <= 0.0) {
-        this->pos_y = 0.0; 
+    if (this->pos_y <= Tela::getChao()) {
+        this->pos_y = Tela::getChao(); 
         desativar();
     }
 }
