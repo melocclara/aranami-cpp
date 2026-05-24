@@ -1,7 +1,7 @@
 #include "Onca.hpp" 
 #include <cmath>
 
-Onca::Onca(std::string nome, double vida, double dano, double pos_x, double pos_y, int cooldown_ataque, int velocidade): Inimigo(nome, vida, dano, pos_x, pos_y, cooldown_ataque), velocidade(velocidade) {}
+Onca::Onca(double pos_x, double pos_y): Inimigo("Onca", 200, 50, pos_x, pos_y, 3), velocidade(10) {}
 
 Onca::~Onca() {} 
 
