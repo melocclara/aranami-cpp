@@ -66,12 +66,7 @@ void Jogador::atirar(std::vector<Projetil*>& balas){
 }
 
 bool Jogador::isVivo() const{
-    if(vida > 0){
-        return true;
-    }
-    else{
-        return false;
-    }
+    return(vida > 0);
 }
 
 void Jogador::adicionarItem(std::string item, int quantidade){

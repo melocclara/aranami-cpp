@@ -14,9 +14,9 @@ class Coletavel {
         // Método virtual puro: cada coletável aplica seu próprio efeito no jogador
         virtual void aplicarEfeito(Jogador& jogador) = 0;
         // Getters
-        float getPosX() const;
-        float getPosY() const;
-        std::string getTipo() const;
+        float inline getPosX() const;
+        float inline getPosY() const;
+        std::string inline getTipo() const;
 };
 
 #endif

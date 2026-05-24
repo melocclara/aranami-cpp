@@ -22,12 +22,12 @@ class Inimigo {
         virtual void atacar(Jogador &jogador) =0; //método virtual puro, permite às classes filhas terem diferentes maneiras de atacar
         void receberDano(int qtd); 
         void atualizarCooldown();
-        std::string getNome()const;
-        double getVida() const;
-        double getDano() const;
-        double getPosicaoX() const;
-        double getPosicaoY() const;
-        int getCooldown() const;
+        std::string inline getNome()const;
+        double inline getVida() const;
+        double inline getDano() const;
+        double inline getPosicaoX() const;
+        double inline getPosicaoY() const;
+        int inline getCooldown() const;
 };
 
 
