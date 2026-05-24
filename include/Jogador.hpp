@@ -5,6 +5,14 @@
 #include <map>
 #include <string>
 #include <vector>
+#include <exception>
+
+class ValorInvalidoException : public std::exception {
+    public:
+        const char* what() const noexcept override {
+            return "Erro: O valor de dano ou cura nao pode ser negativo!";
+        }
+};
 
 class Projetil;
 

@@ -43,6 +43,10 @@ void Jogador::pular(){
 }
 
 void Jogador::receberDano(int dano) {
+    if (dano < 0) {
+        throw ValorInvalidoException();
+    }
+
     if(invencib_timer == 0) {
         this-> vida -= dano;
         invencib_timer = 2;
@@ -50,6 +54,9 @@ void Jogador::receberDano(int dano) {
 }
 
 void Jogador::recuperarVida(int hp) {
+    if (hp < 0) {
+        throw ValorInvalidoException();
+    }
     this->vida = std::min(this->vida + hp, max_vida);
 }
 
