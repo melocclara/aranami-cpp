@@ -2,7 +2,7 @@
 #define CAPIVARA_H
 
 #include "Inimigo.hpp"
-#include "Projetil.hpp"
+#include "../Projeteis/Projetil.hpp"
 #include <vector>
 
 class Capivara : public Inimigo {

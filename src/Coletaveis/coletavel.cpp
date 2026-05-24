@@ -1,4 +1,4 @@
-#include "Coletavel.hpp"
+#include "Coletaveis/Coletavel.hpp"
 
 std::vector<Coletavel*> Coletavel::coletaveis_chao;
 

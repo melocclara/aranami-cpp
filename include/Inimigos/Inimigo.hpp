@@ -2,7 +2,7 @@
 #define INIMIGO_H
 
 #include <string>
-#include "Jogador.hpp"
+#include "../Jogador.hpp"
 
 class Projetil;
 

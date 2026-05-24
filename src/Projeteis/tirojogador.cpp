@@ -1,5 +1,5 @@
-#include "TiroJogador.hpp"
-#include "Pedra.hpp"
+#include "../Projeteis/TiroJogador.hpp"
+#include "../Coletaveis/Pedra.hpp"
 
 
 TiroJogador::TiroJogador(double pos_x, double pos_y, int direcao) : Projetil(pos_x, pos_y, 10.0 * direcao, 0.0, 5) {

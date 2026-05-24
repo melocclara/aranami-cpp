@@ -2,7 +2,7 @@
 #define ONCA_H
    
 #include "Inimigo.hpp"
-#include "Jogador.hpp"
+#include "../Jogador.hpp"
 
 class Onca : public Inimigo{
     private:

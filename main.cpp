@@ -1,14 +1,15 @@
-#include <iostream>
 #include "Jogador.hpp"
-#include "TiroCapivara.hpp"
-#include "TiroTucano.hpp"
-#include "Onca.hpp"
-#include "Capivara.hpp"
-#include "Tucano.hpp"
-#include "Boss.hpp"
-#include "Pipa.hpp"
-#include "Pedra.hpp"
-#include "Guarana.hpp"
+#include "Tela.hpp"
+#include "Inimigos/Onca.hpp"
+#include "Inimigos/Capivara.hpp"
+#include "Inimigos/Tucano.hpp"
+#include "Inimigos/Boss.hpp"
+#include "Projeteis/TiroCapivara.hpp"
+#include "Projeteis/TiroTucano.hpp"
+#include "Projeteis/TiroJogador.hpp"
+#include "Coletaveis/Pipa.hpp"
+#include "Coletaveis/Pedra.hpp"
+#include "Coletaveis/Guarana.hpp"
 
 int main() {
     Jogador Heliconia;

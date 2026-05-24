@@ -2,7 +2,7 @@
 #define TIROJOGADOR_H
 
 #include "Projetil.hpp"
-#include "Tela.hpp"
+#include "../Tela.hpp"
 
 class TiroJogador : public Projetil {
     protected:

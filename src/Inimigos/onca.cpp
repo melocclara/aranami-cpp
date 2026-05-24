@@ -1,4 +1,4 @@
-#include "Onca.hpp" 
+#include "../Inimigos/Onca.hpp" 
 #include <cmath>
 
 Onca::Onca(double pos_x, double pos_y): Inimigo("Onca", 200, 50, pos_x, pos_y, 3), velocidade(10) {}

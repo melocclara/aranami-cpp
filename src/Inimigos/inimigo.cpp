@@ -1,4 +1,4 @@
-#include "Inimigo.hpp"
+#include "../Inimigos/Inimigo.hpp"
 
 int Inimigo::contador_inimigos = 0;
 

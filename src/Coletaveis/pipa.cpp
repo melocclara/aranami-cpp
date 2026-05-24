@@ -1,4 +1,4 @@
-#include "Pipa.hpp"
+#include "../Coletaveis/Pipa.hpp"
 
 Pipa::Pipa(double pos_x, double pos_y) : Coletavel(pos_x, pos_y, "pipa") {};
 
