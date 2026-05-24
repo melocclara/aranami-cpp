@@ -11,7 +11,7 @@ class Onca : public Inimigo{
     public:
         Onca(double pos_x, double pos_y);
         ~Onca();
-        void atacar(Jogador &jogador) override;
+        void atacar(Jogador &jogador, std::vector<Projetil*>& balas) override;
         void mover();
 };
 

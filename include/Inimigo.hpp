@@ -4,6 +4,8 @@
 #include <string>
 #include "Jogador.hpp"
 
+class Projetil;
+
 class Inimigo {
     protected:
         std::string nome;
@@ -18,7 +20,7 @@ class Inimigo {
         Inimigo(std::string nome, double vida, double dano, double pos_x, double pos_y, int cooldown_ataque);
         virtual ~Inimigo();
         // ações
-        virtual void atacar(Jogador &jogador) = 0; // método virtual puro, permite às classes filhas terem diferentes maneiras de atacar
+        virtual void atacar(Jogador &jogador, std::vector<Projetil*>& balas) = 0;
         void receberDano(int qtd); 
         void atualizarCooldown();
         std::string inline getNome() const { return nome; };

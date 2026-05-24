@@ -6,13 +6,10 @@
 #include <vector>
 
 class Capivara : public Inimigo {
-    private:
-        std::vector<Projetil*>& tiros;
-        
     public:
-        Capivara(double pos_x, double pos_y,  std::vector<Projetil*>& tiros);
+        Capivara(double pos_x, double pos_y);
         ~Capivara();
-        void atacar(Jogador &jogador) override;
+        void atacar(Jogador &jogador, std::vector<Projetil*>& balas) override;
 };
 
 #endif

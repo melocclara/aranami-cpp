@@ -11,7 +11,7 @@ void Onca::mover() {
 }
 
 // implementação do ataque
-void Onca::atacar(Jogador& jogador) {
+void Onca::atacar(Jogador& jogador, std::vector<Projetil*>& balas) {
     double distancia = std::abs(jogador.getPosX() - pos_x);
 
     if(distancia <= 50 && cooldown_ataque == 0) {

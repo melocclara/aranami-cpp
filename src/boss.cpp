@@ -11,7 +11,7 @@ void Boss::mover() {
 }
 
 // implementação do ataque
-void Boss::atacar(Jogador& jogador) {
+void Boss::atacar(Jogador& jogador, std::vector<Projetil*>& balas) {
     double distancia = std::abs(jogador.getPosX() - pos_x);
 
     if(distancia <= alcance_ataque && cooldown_ataque == 0) {

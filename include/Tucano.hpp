@@ -6,13 +6,10 @@
 #include <vector>
 
 class Tucano : public Inimigo {
-    private:
-        std::vector<Projetil*>& tiros;
-        
     public:
-        Tucano(double pos_x, double pos_y, std::vector<Projetil*>& tiros);
+        Tucano(double pos_x, double pos_y);
         ~Tucano();
-        void atacar(Jogador& jogador) override;
+        void atacar(Jogador& jogador, std::vector<Projetil*>& balas) override;
 };
 
 #endif
