@@ -36,11 +36,15 @@ void Jogador::pular(){
     }
 }
 
-void Jogador::receberDano(int quantidade){
+void Jogador::receberDano(int dano){
     if(invencib_timer == 0){
-        this-> vida -= quantidade;
+        this-> vida -= dano;
         invencib_timer = 2;
     }
+}
+
+void Jogador::recuperarVida(int hp){
+    this->vida += hp;
 }
 
 void Jogador::atirar(std::vector<Projetil*>& balas){
