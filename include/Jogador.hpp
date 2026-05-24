@@ -19,7 +19,6 @@ class Jogador{
 
         int invencib_timer;
         int tiro_cooldown; 
-        bool no_ar; 
         bool pulo_duplo; 
 
         std::map<std::string, int> inventario; 
@@ -27,7 +26,9 @@ class Jogador{
     public:
         Jogador(int max_vida, float pos_x, float pos_y, float vel_x, float vel_y); 
         void mover(int direcao);
+        bool noAr() const;
         void pular();
+        void ativarPuloDuplo();
 
         void receberDano(int quantidade);
         void atirar(std::vector<Projetil*>& balas);
