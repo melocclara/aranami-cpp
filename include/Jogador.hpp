@@ -32,14 +32,14 @@ class Jogador{
         void receberDano(int dano);
         void recuperarVida(int hp);
         void atirar(std::vector<Projetil*>& balas);
-        bool inline isVivo() const;
+        bool inline isVivo() const { return (vida > 0); };
         void adicionarItem(std::string item, int quantidade);
-        int inline getItem(std::string item) const;
+        int inline getItem(std::string item) const { return (inventario.at(item)); };
         void update();
 
-        int inline getDirecao() const;
-        double inline getPosX() const;
-        double inline getPosY() const;
+        int inline getDirecao() const { return (this->direcao); };
+        double inline getPosX() const { return (this->pos_x); };
+        double inline getPosY() const { return (this->pos_y); };
 
         friend std::ostream& operator<<(std::ostream& os, const Jogador& j);
 };

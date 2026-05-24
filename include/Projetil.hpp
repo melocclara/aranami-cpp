@@ -13,11 +13,11 @@ class Projetil{
         virtual ~Projetil();
 
         virtual void update() = 0;
-        int inline getDano() const;
-        double inline getPosX() const;
-        double inline getPosY() const;
+        int inline getDano() const { return dano; };
+        double inline getPosX() const { return pos_x; };
+        double inline getPosY() const { return pos_y; };
 
-        bool inline isAtivo() const;
+        bool inline isAtivo() const { return ativo; };
         virtual void desativar();
 };
 
