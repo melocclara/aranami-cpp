@@ -5,7 +5,7 @@
 
 class Pedra : public Coletavel {
     public:
-        Pedra(float pos_x, float pos_y);
+        Pedra(double pos_x, double pos_y);
         ~Pedra();
         void aplicarEfeito(Jogador& jogador) override;
 };

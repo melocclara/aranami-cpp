@@ -1,24 +1,21 @@
 #include "Boss.hpp" 
 #include <cmath>
 
-Boss::Boss(std::string n, double v, double d, double x, double y, int cd, int vel, double al): Inimigo(n, v, d, x, y, cd), velocidade(vel), alcance_ataque(al) {}
+Boss::Boss(std::string nome, double vida, double dano, double pos_x, double pos_y, int cooldown_ataque, int velocidade, double alcance_ataque): Inimigo(nome, vida, dano, pos_x, pos_y, cooldown_ataque), velocidade(velocidade), alcance_ataque(alcance_ataque) {}
 
 Boss::~Boss() {} 
 
-//implementação do movimento
+// implementação do movimento
 void Boss::mover() {
-    posicao_x += velocidade;
+    pos_x += velocidade;
 }
 
-//implementação do ataque
+// implementação do ataque
 void Boss::atacar(Jogador& jogador) {
-
-    float distancia = std::abs(jogador.getPosX() - posicao_x);
+    double distancia = std::abs(jogador.getPosX() - pos_x);
 
     if(distancia <= alcance_ataque && cooldown_ataque == 0) {
-
         jogador.receberDano(dano);
-
         cooldown_ataque = 4;
     }
 }
