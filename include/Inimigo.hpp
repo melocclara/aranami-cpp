@@ -12,6 +12,7 @@ class Inimigo {
         double posicao_x; //posições para inimigos no mapa
         double posicao_y;
         int cooldown_ataque;
+        static int contador_inimigos;
         
 
     public:
