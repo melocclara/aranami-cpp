@@ -1,26 +1,21 @@
 #include "Onca.hpp" 
 #include <cmath>
 
-Onca::Onca(std::string n, double v, double d, double x, double y, int cd, int vel): Inimigo(n, v, d, x, y, cd), velocidade(vel) {}
+Onca::Onca(std::string nome, double vida, double dano, double pos_x, double pos_y, int cooldown_ataque, int velocidade): Inimigo(nome, vida, dano, pos_x, pos_y, cooldown_ataque), velocidade(velocidade) {}
 
 Onca::~Onca() {} 
 
-
 //implementação do movimento
 void Onca::mover() {
-    posicao_x += velocidade;
+    pos_x += velocidade;
 }
 
-
-//implementação do ataque
+// implementação do ataque
 void Onca::atacar(Jogador& jogador) {
-
-    float distancia = std::abs(jogador.getPosX() - posicao_x);
+    double distancia = std::abs(jogador.getPosX() - pos_x);
 
     if(distancia <= 50 && cooldown_ataque == 0) {
-
         jogador.receberDano(dano);
-
         cooldown_ataque = 3;
     }
 }

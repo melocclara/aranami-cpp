@@ -3,18 +3,19 @@
 
 class Projetil{
     protected:
-        float pos_x, pos_y;
-        float vel_x, vel_y;
+        double pos_x, pos_y;
+        double vel_x, vel_y;
         int dano;
-        bool ativo; // falso se o projétil já colidiu com algo.
+        bool ativo; // falso se o projétil já colidiu com algo
+        
     public:
-        Projetil(float pos_x, float pos_y, float vel_x, float vel_y, int dano);
+        Projetil(double pos_x, double pos_y, double vel_x, double vel_y, int dano);
         virtual ~Projetil();
 
         virtual void update() = 0;
         int inline getDano() const;
-        float inline getPosX() const;
-        float inline getPosY() const;
+        double inline getPosX() const;
+        double inline getPosY() const;
 
         bool inline isAtivo() const;
         virtual void desativar();

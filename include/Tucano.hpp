@@ -8,6 +8,7 @@
 class Tucano : public Inimigo {
     private:
         std::vector<Projetil*>& tiros;
+        
     public:
         Tucano(double vida, double dano, double pos_x, double pos_y, int cooldown_ataque, std::vector<Projetil*>& tiros);
         ~Tucano();

@@ -4,12 +4,12 @@
 #include "Projetil.hpp"
 
 class Tiro : public Projetil{
-    protected:
-        void ricochetear(float parede_esquerda, float parede_direita); // verificar se o tiro bateu na parede e ricochetear
     public:
-        Tiro(float pos_x, float pos_y, int direcao);
+        Tiro(double pos_x, double pos_y, int direcao);
         ~Tiro();
+
         void update() override;
+        void ricochetear(double parede_esquerda, double parede_direita); // verificar se o tiro bateu na parede e ricochetear
         void desativar() override;
 };
 

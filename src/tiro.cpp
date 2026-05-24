@@ -1,13 +1,13 @@
 #include "Tiro.hpp"
 
 
-Tiro::Tiro(float pos_x, float pos_y, int direcao) : Projetil(pos_x, pos_y, 10.0f * direcao, 0.0f, 5) {
+Tiro::Tiro(double pos_x, double pos_y, int direcao) : Projetil(pos_x, pos_y, 10.0 * direcao, 0.0, 5) {
 }
 
 Tiro::~Tiro() {
 }
 
-void Tiro::ricochetear(float parede_esquerda, float parede_direita) {
+void Tiro::ricochetear(double parede_esquerda, double parede_direita) {
 
     if (this->pos_x >= parede_direita) {
         this->pos_x = parede_direita; 
@@ -21,15 +21,15 @@ void Tiro::ricochetear(float parede_esquerda, float parede_direita) {
 }
 
 void Tiro::update() {
-    this->vel_y -= 0.2f; // obs: ajustar gravidade depois.
+    this->vel_y -= 0.2; // obs: ajustar gravidade depois.
     
     this->pos_x += this->vel_x; 
     this->pos_y += this->vel_y; 
 
     ricochetear(0.0, 0.0); // ajustar limites na main
 
-    if (this->pos_y <= 0.0f) {
-        this->pos_y = 0.0f; 
+    if (this->pos_y <= 0.0) {
+        this->pos_y = 0.0; 
         desativar();
     }
 }

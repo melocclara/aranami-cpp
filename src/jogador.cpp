@@ -2,7 +2,7 @@
 #include "Pedra.hpp"
 #include "Tiro.hpp"
 
-Jogador::Jogador(int max_vida, float pos_x, float pos_y, float vel_x, float vel_y){
+Jogador::Jogador(int max_vida, double pos_x, double pos_y, double vel_x, double vel_y){
     this->max_vida = max_vida;
     this->vida = max_vida;
     this->pos_x = pos_x;
@@ -13,7 +13,7 @@ Jogador::Jogador(int max_vida, float pos_x, float pos_y, float vel_x, float vel_
     invencib_timer = 0;
     tiro_cooldown = 0;
     pulo_duplo = false;
-    inventario.insert({"Pedra", 8});
+    inventario.insert({"pedra", 8});
 }
 
 void Jogador::mover(int direcao){
@@ -34,7 +34,7 @@ void Jogador::pular(){
     }
     else {
         pos_y += vel_y; 
-        if (getItem("Pipa") > 0) {
+        if (getItem("pipa") > 0) {
             pulo_duplo = true; 
         } else {
             pulo_duplo = false;
@@ -54,38 +54,38 @@ void Jogador::recuperarVida(int hp){
 }
 
 void Jogador::atirar(std::vector<Projetil*>& balas){
-    if(tiro_cooldown > 0 || inventario["Pedra"] == 0){
+    if(tiro_cooldown > 0 || inventario["pedra"] == 0){
         return;
     }
     else{
-        inventario["Pedra"] -= 1;
+        inventario["pedra"] -= 1;
         tiro_cooldown = 2;
         Tiro* pedra = new Tiro(this->pos_x, this->pos_y, direcao);
         balas.push_back(pedra);
     }
 }
 
-bool Jogador::isVivo() const{
+bool Jogador::isVivo() const {
     return(vida > 0);
 }
 
-void Jogador::adicionarItem(std::string item, int quantidade){
+void Jogador::adicionarItem(std::string item, int quantidade) {
     inventario[item] += quantidade;
 }
 
-int Jogador::getItem(std::string item) const{
+int Jogador::getItem(std::string item) const {
     return(inventario.at(item));
 }
 
-int Jogador::getDirecao() const{
+int Jogador::getDirecao() const {
     return(this->direcao);
 }
 
-float Jogador::getPosX() const{
+double Jogador::getPosX() const {
     return(this->pos_x);
 }
 
-float Jogador::getPosY() const{
+double Jogador::getPosY() const {
     return(this->pos_y);
 }
 

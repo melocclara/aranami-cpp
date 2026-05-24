@@ -7,11 +7,11 @@ Capivara::Capivara(double vida, double dano, double pos_x, double pos_y, int coo
 Capivara::~Capivara() {};
 
 void Capivara::atacar(Jogador& jogador) {
-    double distancia = jogador.getPosX() - posicao_x;
+    double distancia = jogador.getPosX() - pos_x;
 
     if(std::abs(distancia) < 1000 && cooldown_ataque == 0) {
         int direcao = (distancia > 0) ? 1 : -1;
-        tiros.push_back(new Tiro(posicao_x, posicao_y, direcao));
+        tiros.push_back(new Tiro(pos_x, pos_y, direcao));
         cooldown_ataque = 100;
     }
 };

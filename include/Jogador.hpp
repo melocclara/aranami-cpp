@@ -13,8 +13,8 @@ class Jogador{
         int vida; 
         int max_vida;
 
-        float pos_x, pos_y; 
-        float vel_x, vel_y;  
+        double pos_x, pos_y; 
+        double vel_x, vel_y;  
         int direcao; 
 
         int invencib_timer;
@@ -24,11 +24,10 @@ class Jogador{
         std::map<std::string, int> inventario; 
 
     public:
-        Jogador(int max_vida = 10, float pos_x = 5, float pos_y = 0, float vel_x = 1, float vel_y = 2); 
+        Jogador(int max_vida = 10, double pos_x = 5, double pos_y = 0, double vel_x = 1, double vel_y = 2); 
         void mover(int direcao);
         bool noAr() const;
         void pular();
-        void ativarPuloDuplo();
 
         void receberDano(int dano);
         void recuperarVida(int hp);
@@ -39,8 +38,8 @@ class Jogador{
         void update();
 
         int inline getDirecao() const;
-        float inline getPosX() const;
-        float inline getPosY() const;
+        double inline getPosX() const;
+        double inline getPosY() const;
 
         friend std::ostream& operator<<(std::ostream& os, const Jogador& j);
 };
