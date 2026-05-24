@@ -1,14 +1,14 @@
-#ifndef TIRO_H
-#define TIRO_H
+#ifndef TIROJOGADOR_H
+#define TIROJOGADOR_H
 
 #include "Projetil.hpp"
 
-class Tiro : public Projetil {
+class TiroJogador : public Projetil {
     protected:
         void ricochetear(double parede_esquerda, double parede_direita); // verificar se o tiro bateu na parede e ricochetear
     public:
-        Tiro(double pos_x, double pos_y, int direcao);
-        ~Tiro();
+        TiroJogador(double pos_x, double pos_y, int direcao);
+        ~TiroJogador();
 
         void update() override;
         void desativar() override;
