@@ -2,7 +2,7 @@
 #include "Tiro.hpp"
 #include <cmath>
 
-Capivara::Capivara(double vida, double dano, double pos_x, double pos_y, int cooldown_ataque, std::vector<Projetil*>& tiros) : Inimigo("capivara", vida, dano, pos_x, pos_y, cooldown_ataque), tiros(tiros) {};
+Capivara::Capivara(double pos_x, double pos_y,  std::vector<Projetil*>& tiros) : Inimigo("Onca", 200, 50, pos_x, pos_y, 3), tiros(tiros) {};
 
 Capivara::~Capivara() {};
 

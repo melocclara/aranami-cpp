@@ -10,7 +10,7 @@ class Capivara : public Inimigo {
         std::vector<Projetil*>& tiros;
         
     public:
-        Capivara(double vida, double dano, double pos_x, double pos_y, int cooldown_ataque, std::vector<Projetil*>& tiros);
+        Capivara(double pos_x, double pos_y,  std::vector<Projetil*>& tiros);
         ~Capivara();
         void atacar(Jogador &jogador) override;
 };
