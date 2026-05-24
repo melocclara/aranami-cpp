@@ -1,8 +1,8 @@
 #include "Inimigo.hpp"
 
-Inimigo::Inimigo(std::string nome, double vida, double dano, double pos_x, double pos_y, int cooldown_ataque): nome(nome), vida(vida), dano(dano), pos_x(pos_x), pos_y(pos_y), cooldown_ataque(cooldown_ataque) {}
+Inimigo::Inimigo(std::string nome, double vida, double dano, double pos_x, double pos_y, int cooldown_ataque): nome(nome), vida(vida), dano(dano), pos_x(pos_x), pos_y(pos_y), cooldown_ataque(cooldown_ataque) { contador_inimigos++; }
 
-Inimigo::~Inimigo() {}
+Inimigo::~Inimigo() { contador_inimigos--; }
 
 // implementação do cooldown
 void Inimigo::atualizarCooldown() {

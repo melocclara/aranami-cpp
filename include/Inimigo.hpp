@@ -12,6 +12,7 @@ class Inimigo {
         double pos_x; // posições para inimigos no mapa
         double pos_y;
         int cooldown_ataque;
+        static int contador_inimigos;
 
     public:
         Inimigo(std::string nome, double vida, double dano, double pos_x, double pos_y, int cooldown_ataque);
