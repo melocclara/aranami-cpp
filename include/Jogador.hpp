@@ -24,13 +24,14 @@ class Jogador{
         std::map<std::string, int> inventario; 
 
     public:
-        Jogador(int max_vida, float pos_x, float pos_y, float vel_x, float vel_y); 
+        Jogador(int max_vida = 10, float pos_x = 5, float pos_y = 0, float vel_x = 1, float vel_y = 2); 
         void mover(int direcao);
         bool noAr() const;
         void pular();
         void ativarPuloDuplo();
 
-        void receberDano(int quantidade);
+        void receberDano(int dano);
+        void recuperarVida(int hp);
         void atirar(std::vector<Projetil*>& balas);
         bool isVivo() const;
         void adicionarItem(std::string item, int quantidade);
