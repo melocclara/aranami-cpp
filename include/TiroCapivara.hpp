@@ -5,7 +5,7 @@
 
 class TiroCapivara : public Projetil {
     public:
-        TiroCapivara(float pos_x, float pos_y, int direcao);
+        TiroCapivara(double pos_x, double pos_y, int direcao);
         ~TiroCapivara();
 
         void update() override;

@@ -1,6 +1,6 @@
 #include "TiroCapivara.hpp"
 
-TiroCapivara::TiroCapivara(float pos_x, float pos_y, int direcao) 
+TiroCapivara::TiroCapivara(double pos_x, double pos_y, int direcao) 
     : Projetil(pos_x, pos_y, 8.0 * direcao, 0.0, 5) {
 }
 

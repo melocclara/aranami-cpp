@@ -1,6 +1,6 @@
 #include "TiroTucano.hpp"
 
-TiroTucano::TiroTucano(float pos_x, float pos_y) : Projetil(pos_x, pos_y, 0.0, -1.0, 1) {}
+TiroTucano::TiroTucano(double pos_x, double pos_y) : Projetil(pos_x, pos_y, 0.0, -1.0, 1) {}
 
 TiroTucano::~TiroTucano() {
 }
