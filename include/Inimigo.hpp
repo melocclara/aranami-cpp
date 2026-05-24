@@ -11,23 +11,23 @@ class Inimigo {
         double dano; 
         double posicao_x; //posições para inimigos no mapa
         double posicao_y;
+        int cooldown_ataque;
         
 
     public:
-        Inimigo(std::string n, double v, double d, double x, double y) : nome(n), vida(v), dano(d), posicao_x(x), posicao_y(y){}
-        virtual ~Inimigo() {}
+        Inimigo(std::string n, double v, double d, double x, double y, int cd);
+        virtual ~Inimigo();
 
         //ações
         virtual void atacar(Jogador &jogador) =0; //método virtual puro, permite às classes filhas terem diferentes maneiras de atacar
         void receberDano(int qtd); 
-        void mostrarStatus() const;
-
-        std::string getNome()const {return nome;};
-        double getVida() const {return vida;};
-        double getDano() const {return dano;};
-        double getPosicaoX() const {return posicao_x;};
-        double getPosicaoY() const {return posicao_y;};
-
+        void atualizarCooldown();
+        std::string getNome()const;
+        double getVida() const;
+        double getDano() const;
+        double getPosicaoX() const;
+        double getPosicaoY() const;
+        int getCooldown() const;
 };
 
 
