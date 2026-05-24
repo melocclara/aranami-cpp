@@ -2,7 +2,7 @@
 #include "Tiro.hpp"
 #include <cmath>
 
-Tucano::Tucano(double vida, double dano, double pos_x, double pos_y, int cooldown_ataque, std::vector<Projetil*>& tiros) : Inimigo("tucano", vida, dano, pos_x, pos_y, cooldown_ataque), tiros(tiros) {};
+Tucano::Tucano(double pos_x, double pos_y, std::vector<Projetil*>& tiros) : Inimigo("Tucano", 100, 50, pos_x, pos_y, 3), tiros(tiros) {};
 
 Tucano::~Tucano() {};
 

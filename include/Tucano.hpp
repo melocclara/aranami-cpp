@@ -10,7 +10,7 @@ class Tucano : public Inimigo {
         std::vector<Projetil*>& tiros;
         
     public:
-        Tucano(double vida, double dano, double pos_x, double pos_y, int cooldown_ataque, std::vector<Projetil*>& tiros);
+        Tucano(double pos_x, double pos_y, std::vector<Projetil*>& tiros);
         ~Tucano();
         void atacar(Jogador& jogador) override;
 };
