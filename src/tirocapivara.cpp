@@ -10,8 +10,6 @@ TiroCapivara::~TiroCapivara() {
 
 void TiroCapivara::update() {
     this->pos_x += this->vel_x; 
-    double limite_esquerdo = 0; 
-    double limite_direito = 0;
     if (this->pos_x <= Tela::getLimiteEsquerdo() || this->pos_x >= Tela::getLimiteDireito()) {
         desativar(); 
     }
