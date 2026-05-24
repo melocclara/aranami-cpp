@@ -1,4 +1,4 @@
-#include "../Coletaveis/Guarana.hpp"
+#include "Coletaveis/Guarana.hpp"
 
 Guarana::Guarana(double pos_x, double pos_y): Coletavel(pos_x, pos_y, "guarana") {}
 Guarana::~Guarana() {}

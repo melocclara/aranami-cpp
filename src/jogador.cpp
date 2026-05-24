@@ -1,6 +1,6 @@
 #include "Jogador.hpp"
-#include "../Coletaveis/Pedra.hpp"
-#include "../Projeteis/TiroJogador.hpp"
+#include "Coletaveis/Pedra.hpp"
+#include "Projeteis/TiroJogador.hpp"
 #include "Tela.hpp"
 
 Jogador::Jogador(int max_vida, double pos_x, double pos_y, double vel_x, double vel_y) {

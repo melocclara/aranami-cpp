@@ -1,5 +1,5 @@
-#include "../Inimigos/Capivara.hpp"
-#include "../Projeteis/TiroCapivara.hpp"
+#include "Inimigos/Capivara.hpp"
+#include "Projeteis/TiroCapivara.hpp"
 #include <cmath>
 
 Capivara::Capivara(double pos_x, double pos_y) : Inimigo("Capivara", 100, 50, pos_x, pos_y, 5) {};

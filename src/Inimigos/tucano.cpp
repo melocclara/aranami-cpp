@@ -1,5 +1,5 @@
-#include "../Inimigos/Tucano.hpp"
-#include "../Projeteis/TiroTucano.hpp"
+#include "Inimigos/Tucano.hpp"
+#include "Projeteis/TiroTucano.hpp"
 #include <cmath>
 
 Tucano::Tucano(double pos_x, double pos_y) : Inimigo("Tucano", 100, 50, pos_x, pos_y, 3) {};

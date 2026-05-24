@@ -2,7 +2,7 @@
 #define TUCANO_H
 
 #include "Inimigo.hpp"
-#include "../Projeteis/Projetil.hpp"
+#include "Projeteis/Projetil.hpp"
 #include <vector>
 
 class Tucano : public Inimigo {

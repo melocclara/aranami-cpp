@@ -2,7 +2,7 @@
 #define GUARANA_H
 
 #include "Coletavel.hpp"
-#include "../Jogador.hpp"
+#include "Jogador.hpp"
 
 class Guarana : public Coletavel {
     public:

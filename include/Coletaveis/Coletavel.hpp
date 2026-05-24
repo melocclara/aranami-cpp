@@ -2,7 +2,7 @@
 #define COLETAVEL_H
 
 #include <string>
-#include "../Jogador.hpp"
+#include "Jogador.hpp"
 
 class Coletavel {
     protected:

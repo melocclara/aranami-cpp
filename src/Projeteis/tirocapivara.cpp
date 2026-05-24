@@ -1,4 +1,4 @@
-#include "../Projeteis/TiroCapivara.hpp"
+#include "Projeteis/TiroCapivara.hpp"
 #include "Tela.hpp"
 
 TiroCapivara::TiroCapivara(double pos_x, double pos_y, int direcao) 

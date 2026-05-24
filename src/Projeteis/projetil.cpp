@@ -1,4 +1,4 @@
-#include "../Projeteis/Projetil.hpp"
+#include "Projeteis/Projetil.hpp"
 
 Projetil::Projetil(double pos_x, double pos_y, double vel_x, double vel_y, int dano) {
     this->pos_x = pos_x;
