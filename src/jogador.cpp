@@ -61,15 +61,17 @@ void Jogador::recuperarVida(int hp) {
     this->vida = std::min(this->vida + hp, max_vida);
 }
 
-void Jogador::atirar(std::vector<Projetil*>& balas) {
+void Jogador::atacar(Inimigo& alvo) {
     if(tiro_cooldown > 0 || inventario["pedra"] == 0){
         return;
     }
-    else{
+
+    double distancia = std::abs(alvo.getPosX() - pos_x);
+
+    if(distancia <= 5.0) {
         inventario["pedra"] -= 1;
         tiro_cooldown = 2;
-        TiroJogador* pedra = new TiroJogador(this->pos_x, this->pos_y, direcao);
-        balas.push_back(pedra);
+        alvo.receberDano(5); 
     }
 }
 

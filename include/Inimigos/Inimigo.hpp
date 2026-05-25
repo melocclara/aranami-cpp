@@ -4,8 +4,6 @@
 #include <string>
 #include "Jogador.hpp"
 
-class Projetil;
-
 class Inimigo {
     protected:
         std::string nome;

@@ -26,7 +26,7 @@ cd aranami-cpp
 
 Use o comando a seguir para compilar:
 ```
-g++ main.cpp src/*.cpp src/Inimigos/*.cpp src/Coletaveis/*.cpp src/Projeteis/*.cpp -I include -o jogo 
+g++ main.cpp src/*.cpp src/Inimigos/*.cpp src/Coletaveis/*.cpp -I include -o jogo
 ```
 
 Agora execute:
