@@ -42,7 +42,11 @@ class Jogador{
         void atirar(std::vector<Projetil*>& balas);
         bool inline isVivo() const { return (vida > 0); };
         void adicionarItem(std::string item, int quantidade);
-        int inline getItem(std::string item) const { return (inventario.at(item)); };
+        int inline getItem(std::string item) const { 
+            if (inventario.count(item) > 0) {
+                return inventario.at(item);
+            } else { return 0; }
+        }; 
         void update();
 
         int inline getDirecao() const { return (this->direcao); };
