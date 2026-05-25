@@ -12,7 +12,7 @@ class Boss : public Inimigo{
     public:
         Boss(std::string nome, double vida, double dano, double pos_x, double pos_y, int cooldown_ataque, int velocidade, double alcance_ataque);
         ~Boss();
-        void atacar(Jogador &jogador, std::vector<Projetil*>& balas) override;
+        void atacar(Jogador &jogador) override;
         void mover();
 };
 

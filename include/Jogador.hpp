@@ -6,6 +6,7 @@
 #include <string>
 #include <vector>
 #include <exception>
+#include "Inimigos/Inimigo.hpp"
 
 class ValorInvalidoException : public std::exception {
     public:
@@ -13,8 +14,6 @@ class ValorInvalidoException : public std::exception {
             return "Erro: O valor de dano ou cura nao pode ser negativo!";
         }
 };
-
-class Projetil;
 
 class Jogador{
     private:
@@ -39,7 +38,7 @@ class Jogador{
 
         void receberDano(int dano);
         void recuperarVida(int hp);
-        void atirar(std::vector<Projetil*>& balas);
+        void atacar(Inimigo& alvo);
         bool inline isVivo() const { return (vida > 0); };
         void adicionarItem(std::string item, int quantidade);
         int inline getItem(std::string item) const { 

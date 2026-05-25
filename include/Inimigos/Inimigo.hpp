@@ -20,7 +20,7 @@ class Inimigo {
         Inimigo(std::string nome, double vida, double dano, double pos_x, double pos_y, int cooldown_ataque);
         virtual ~Inimigo();
         // ações
-        virtual void atacar(Jogador &jogador, std::vector<Projetil*>& balas) = 0;
+        virtual void atacar(Jogador &jogador) = 0;
         void receberDano(double qtd); 
         void atualizarCooldown();
         std::string inline getNome() const { return nome; };
