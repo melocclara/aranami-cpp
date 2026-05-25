@@ -9,11 +9,10 @@ class Onca : public Inimigo{
         int velocidade;
 
     public:
-        Onca(std::string n, double v, double d, double x, double y, int cd, int vel);
+        Onca(double pos_x, double pos_y);
         ~Onca();
         void atacar(Jogador &jogador) override;
         void mover();
-
 };
 
 #endif

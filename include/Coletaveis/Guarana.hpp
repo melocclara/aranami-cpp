@@ -1,4 +1,3 @@
-
 #ifndef GUARANA_H
 #define GUARANA_H
 
@@ -6,11 +5,9 @@
 #include "Jogador.hpp"
 
 class Guarana : public Coletavel {
-
     public:
-        Guarana(float pos_x, float pos_y);
+        Guarana(double pos_x, double pos_y);
         ~Guarana();
-
         void aplicarEfeito(Jogador& jogador) override;
 };
 
