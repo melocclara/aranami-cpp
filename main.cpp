@@ -31,8 +31,10 @@ int main() {
         inimigos.push_back(new Capivara(8, Tela::getChao())); // criação da capivara
 
         inimigos[0]->atacar(heliconia); // ataque da capivara
+        inimigos[0]->atacar(heliconia); // tentativa de atacar em cooldown
         std::cout << "Ataque da Capivara" << std::endl;
         std::cout << heliconia << std::endl;
+
 
         heliconia.atacar(*inimigos[0]); // helicônia ataca capivara
         std::cout << "Ataque da Helicônia" << std::endl;
