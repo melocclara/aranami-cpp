@@ -2,7 +2,7 @@
 #include "Jogador.hpp"
 #include <cmath>
 
-Boss::Boss(std::string nome, double vida, double dano, double pos_x, double pos_y, int cooldown_ataque, int velocidade, double alcance_ataque): Inimigo(nome, vida, dano, pos_x, pos_y, cooldown_ataque), velocidade(velocidade), alcance_ataque(alcance_ataque) {}
+Boss::Boss(double pos_x, double pos_y): Inimigo("Boss", 12, 1, pos_x, pos_y, 0), velocidade(velocidade), alcance_ataque(alcance_ataque) {}
 
 Boss::~Boss() {} 
 

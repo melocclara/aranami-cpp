@@ -2,7 +2,7 @@
 #include "Jogador.hpp"
 #include <cmath>
 
-Tucano::Tucano(double pos_x, double pos_y) : Inimigo("Tucano", 100, 50, pos_x, pos_y, 3) {};
+Tucano::Tucano(double pos_x, double pos_y) : Inimigo("Tucano", 100, 1, pos_x, pos_y, 3) {};
 Tucano::~Tucano() {};
 
 void Tucano::atacar(Jogador& jogador) {

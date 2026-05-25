@@ -1,0 +1,99 @@
+Respondam as perguntas a seguir sobre o uso de C++ no desenvolvimento do projeto da disciplina. Todas as perguntas devem ser respondidas de acordo com o seguinte modelo:
+
+    Sim. Arquivo: X.cpp (linhas XX .. YY).
+    Não. Justificativa: XXX.
+
+✅Declarou namespaces?
+    Não. Como o projeto não tem muito risco com relação à colisão de nomes, não vimos necessidade de definir namespaces.
+
+
+✅Declarou métodos inline de forma explícita? *
+
+    Inimigo.hpp(linhas: 24 a 29)
+    Coletavel.hpp(linhas: 18 a 20)
+    Jogador.hpp(linhas: 42, 44, 51 a 54)
+    tela.hpp(linhas: 12 a 15)
+    
+✅Passou argumentos por referência?
+
+    Coletavel.hpp(linha: 17)
+    Guarana.hpp(linha: 11)
+    Pedra.hpp(linha: 10)
+    Pipa.hpp(linha: 10)
+    Boss.hpp(linha: 15)
+    Capivara.hpp(linha: 10)
+    Inimigo.hpp(linha: 21)
+    Onca.hpp(linha 14)
+    Tucano.hpp(linha: 11)
+    Jogador.hpp(linhas: 41, 55)
+    Coletavel.cpp(linha: 5)
+    guarana.cpp(linha: 7)
+    pedra.cpp(linha: 7)
+    pipa.cpp(linha: 7)
+    boss.cpp(linha: 15)
+    capivara.cpp(linha: 9)
+    onca.cpp(linha: 15)
+    tucano.cpp(linha: 8)
+    jogador.cpp(linhas: 64, 82)
+    main.cpp(linhas: 76, 83, 115)
+    
+✅Declarou parâmetros com valores padrão?
+    Sim. Arquivos: Jogador.hpp (linha: 34)
+
+✅Declarou atributos e/ou métodos estáticos?
+    SIM.
+    Arquivos:
+    Inimigo.hpp (linha: 15)
+    Coletavel.hpp (linha: 11)
+
+✅ Declarou métodos privados e/ou protegidos?
+    Não. Não vimos necessidade de proteger nenhum método. Só usamos os protected com atributos, nas classes-mãe Inimigo e Coletavel.
+    
+✅ Declarou ponteiros para objetos?
+    Sim. 
+    Arquivos: 
+    Coletavel.hpp (linha: 11)
+    Coletavel.cpp (linha: 3)
+    main.cpp (linhas: 178, 197, 208)
+
+✅Declarou parâmetros constantes?
+    SIM.
+    Arquivos:
+    Coletavel.hpp (linha: 15)
+    Coletavel.cpp (linha: 5)
+
+
+✅Declarou métodos constantes?
+    Sim. Arquivos: Jogador.hpp (linhas: 36, 42, 44 e 51-53); Inimigo.hpp (linhas: 24 a 29); Coletavel.hpp (linhas: 18 a 20)
+
+✅Fez overloading de operadores?
+
+   Jogador.hpp(linha: 55)
+   Jogador.cpp(linhas: 82 a 100)
+   
+✅Fez uso de herança?
+    Sim.
+    Arquivos:
+    Guarana.hpp(linha: 7)
+    Pedra.hpp(linha: 6)
+    Pipa.hpp(linha: 6)
+    Boss.hpp(linha: 7)
+    Capivara.hpp(linha: 6)
+    Onca.hpp(linha: 7)
+    Tucano.hpp(linha: 7)
+
+
+✅Fez uso de cast dinâmico?
+    Não. Pela forma como estruturamos o código não nos deparamos com a necessidade de fazer downcasting nem nada que fosse nos fazer precisar de cast dinâmico.
+✅Fez uso de métodos virtuais?
+    Sim. Arquivos: Coletavel.hpp (linhas: 16 e 17); Inimigo.hpp (linhas: 19 e 21)
+✅Fez uso de exceções (throw)?
+    Sim. Arquivos: Jogador.cpp (20); Inimigo.cpp (linhas: 48 e 59)
+✅Fez uso de exceções (catch)? 
+    Sim. Arquivo: Main.cpp (linhas: 76, 83 e 115)
+✅Fez uso de tipos genéricos (template)?
+    Não. A maioria dos nossos argumentos eram tipos bem simples e definidos, que não tinham a necessidade de serem mutáveis. Por isso não vimos motivo para usar templates no projeto.
+
+
+
+

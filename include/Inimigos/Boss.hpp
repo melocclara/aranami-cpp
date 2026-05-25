@@ -10,7 +10,7 @@ class Boss : public Inimigo{
         double alcance_ataque;
 
     public:
-        Boss(std::string nome, double vida, double dano, double pos_x, double pos_y, int cooldown_ataque, int velocidade, double alcance_ataque);
+        Boss(double pos_x, double pos_y);
         ~Boss();
         void atacar(Jogador &jogador) override;
         void mover();

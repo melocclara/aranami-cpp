@@ -6,7 +6,7 @@ class Tela {
         static double limite_esquerdo;
         static double limite_direito;
         static double chao;
-         static double teto;
+        static double teto;
 
     public:
         static double inline getLimiteEsquerdo() { return limite_esquerdo; }
