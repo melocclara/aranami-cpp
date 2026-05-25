@@ -1,4 +1,5 @@
 #include "Inimigos/Inimigo.hpp"
+#include "Jogador.hpp"
 
 int Inimigo::contador_inimigos = 0;
 
@@ -13,7 +14,7 @@ void Inimigo::atualizarCooldown() {
     }
 }
 
-// dano que o inimigo recebe do jogador
+// dano que o inimigo recebe do jogador 
 void Inimigo::receberDano(double qtd) {
     if (qtd < 0) {
         throw ValorInvalidoException();

@@ -6,7 +6,7 @@
 #include <string>
 #include <vector>
 #include <exception>
-#include "Inimigos/Inimigo.hpp"
+class Inimigo;
 
 class ValorInvalidoException : public std::exception {
     public:

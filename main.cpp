@@ -4,9 +4,6 @@
 #include "Inimigos/Capivara.hpp"
 #include "Inimigos/Tucano.hpp"
 #include "Inimigos/Boss.hpp"
-#include "Projeteis/TiroCapivara.hpp"
-#include "Projeteis/TiroTucano.hpp"
-#include "Projeteis/TiroJogador.hpp"
 #include "Coletaveis/Pipa.hpp"
 #include "Coletaveis/Pedra.hpp"
 #include "Coletaveis/Guarana.hpp"
@@ -17,41 +14,38 @@ int main() {
     
     // JOGADOR
     Jogador heliconia; // criação do objeto
-    std::cout << heliconia;
+    std::cout << "Criação de Helicônia" << std::endl;
+    std::cout << heliconia << std::endl;
 
     // PULO SIMPLES
+    std::cout << "Pulo de Helicônia" << std::endl;
     heliconia.pular(); // pula
-    std::cout << heliconia;
+    std::cout << heliconia << std::endl;;
     heliconia.update(); // cai (gravidade)
-    std::cout << heliconia;
+    std::cout << heliconia << std::endl;
 
     // INIMIGOS
     std::vector<Inimigo*> inimigos;
 
-    // Capivara 
-    // O primeiro ataque bate na helicônia e no segundo ela pula e desvia
-    inimigos.push_back(new Capivara(8, Tela::getChao())); // criação da capivara
-    std::vector<Projetil*> balasGlobais; // criação do vetor de projeteis ativos
+        // Capivara 
+        inimigos.push_back(new Capivara(8, Tela::getChao())); // criação da capivara
 
-    // Primeiro ataque
-    inimigos[0]->atacar(heliconia, balasGlobais); // ataque da capivara
-    for (Projetil* tiro : balasGlobais){ // loop do movimento do tiro
-        if (tiro->isAtivo()){
-            tiro->update();
+        inimigos[0]->atacar(heliconia); // ataque da capivara
+        std::cout << "Ataque da Capivara" << std::endl;
+        std::cout << heliconia << std::endl;
 
-            if(tiro->getPosX() == heliconia.getPosX() && tiro->getPosY() == heliconia.getPosY()){ // se colidir com o jogador, dá dano e desativa
-                heliconia.receberDano(tiro->getDano());
-                tiro->desativar(); 
-        }
-        }
-    
-    // 
-    
+        heliconia.atacar(*inimigos[0]); // helicônia ataca capivara
+        std::cout << "Ataque da Helicônia" << std::endl;
+        std::cout << heliconia << std::endl;
         
+        if (inimigos[0]->getVida() == 0){ // a capivara morre :((
+            delete inimigos[0];
+            inimigos.erase(inimigos.begin());
+        }
     }
 
     
-
+    /*
     // PIPA (COLETÁVEL)
     Coletavel* c1 = new Pipa(7.0, 0.0);
     Pipa* p1 = dynamic_cast<Pipa*>(c1);
@@ -64,4 +58,4 @@ int main() {
     delete c1;
 
     return 0;
-}
+    */
